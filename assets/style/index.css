@@ -1,4 +1,17 @@
-#about {
-    scroll-margin-top: 10vh;
+#about, #services, #contact {
+    scroll-margin-top: 8vh;
   }
+
+#submit-contact-button {
+  background-color: #81D959;
+  border-color: #81D959;
+}
+
+.landing-section {
+  background-color: #81D959;
+}
+
+.navbar-section {
+  background-color: #81D959;
+}
   
