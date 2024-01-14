@@ -52,8 +52,8 @@ class Footer extends HTMLElement {
           </div>
           <div class="col-md-6">
             <p class=""><i class="fa-solid fa-location-dot"></i> Spokane, WA</p>
-            <p class=""><i class="fa-solid fa-phone"></i> 509-903-5493</p>
-            <p class=""><i class="fa-solid fa-envelope"></i> sales@caribourentals.com</p>
+            <p class=""><i class="fa-solid fa-phone"></i> 123-456-7890</p>
+            <p class=""><i class="fa-solid fa-envelope"></i> test@caribourentals.com</p>
           </div>
         </div>
         <div class="row pt-5">
