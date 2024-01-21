@@ -2,7 +2,7 @@
     scroll-margin-top: 8vh;
   }
 
-#submit-contact-button {
+#form-submit-button {
   background-color: #81D959;
   border-color: #81D959;
 }
@@ -17,8 +17,7 @@
 
 .card-footer {
   background-color: #81D959;
-  color: black;
   font-weight: bolder;
   text-align: center;
 }
-  
+

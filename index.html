@@ -37,7 +37,7 @@
 </head>
 
 <body class="">
-  <navbar-component></navbar-component>
+  <navbar-component />
   <!-- landing section -->
   <div class="landing-section text-center py-5 mt-0">
     <div class="row">
@@ -104,7 +104,7 @@
           <p>We offer short term rentals (day, overnight, multi-night) as well as longer term leases (month,
             multi-month,
             quarter, semi-annual, annual) on trailers and equipment.</p>
-          
+
           <p class="mb-1" style="font-weight: 700; text-decoration: underline;">
             We offer two types of short term trailer rentals:
           </p>
@@ -114,7 +114,7 @@
           <p class="mb-0"><i class="fa-solid fa-arrow-right"></i> One-Way</p>
           <p class="small ps-3">Currently only available for trips
             between Spokane and Seattle, either direction.</p>
-          
+
           <p class="mb-0" style="font-weight: 700; text-decoration: underline;">
             Trailers we keep in inventory or can procure:
           </p>
@@ -148,41 +148,47 @@
           </svg> -->
         </div>
         <div class="col-lg-8">
-          <form action="">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <!-- <input type="hidden" name="access_key" value="1f454ee3-f27d-4749-a619-b3945ce0e231"> -->
+            <input type="hidden" name="from_name" value="New Message">
+            <input type="hidden" name="subject" value="Caribou Rentals got a new message">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div class="row">
-              <div class="col">
+              <div class="col" id="contact-form">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="name" placeholder="Name" required>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Name" required>
                   <label for="name">Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="phone" placeholder="###-###-####">
+                  <input name="phone" type="number" class="form-control" id="phone" placeholder="###-###-####">
                   <label for="phone">Phone</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com"
+                    required>
                   <label for="email">Email</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="referral" placeholder="How did you hear about us?">
+                  <input name="referral" type="text" class="form-control" id="referral"
+                    placeholder="How did you hear about us?">
                   <label for="referral">How did you hear about us?</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="datetime-local" class="form-control pt-5 pb-4" id="pickup">
+                  <input name="pickup" type="datetime-local" class="form-control pt-5 pb-4" id="pickup">
                   <label for="pickup" class="form-label">Pickup Date & Time </label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="datetime-local" class="form-control pt-5 pb-4" id="drop-off" style="font-size: medium">
+                  <input name="drop-off" type="datetime-local" class="form-control pt-5 pb-4" id="drop-off">
                   <label for="drop-off" class="form-label">Drop-Off Date & Time </label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <textarea class="form-control" placeholder="What you are looking for?" id="request-text" name="request-text"
-                    style="height: 100px;" required></textarea>
+                  <textarea class="form-control" placeholder="What you are looking for?" id="request-text"
+                    name="request-text" style="height: 100px;" required></textarea>
                   <label for="request-text">What are you looking for?</label>
                   <div class="text-secondary fw-light">
                     <p class="mb-0">The more specific the better, examples: </p>
@@ -193,10 +199,8 @@
                 </div>
               </div>
             </div>
-            <div class="d-grid pt-4">
-              <button class="g-recaptcha btn btn-primary" id="submit-contact-button"
-                data-sitekey="6Lc9yUcpAAAAAPbrlzxjk8UvQJ-SsMEb5AbZVcs0" data-callback='onSubmit'
-                data-action='submit'>Submit</button>
+            <div class="d-grid pt-4" id="submit-button">
+              <button class="btn btn-primary" id="form-submit-button" type="submit">Submit</button>
             </div>
           </form>
         </div>
@@ -206,7 +210,7 @@
   </div>
   <!-- end main content -->
 
-  <footer-component></footer-component>
+  <footer-component />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
