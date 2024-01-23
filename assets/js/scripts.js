@@ -70,3 +70,23 @@ form.addEventListener("submit", function (e) {
       }, 5000);
     });
 });
+
+function hideNavOnSmallScreen() {
+  let navPhone = document.getElementById('nav-phone');
+  let navEmail = document.getElementById('nav-email');
+
+  // Check if the window width is less than a certain value (e.g., 600 pixels)
+  if (window.innerWidth < 992) {
+    // If the screen size is small, hide the element
+    navPhone.style.display = 'none';
+    navEmail.style.display = 'none';
+  } else {
+    // If the screen size is not small, show the element
+    navPhone.style.display = 'block';
+    navEmail.style.display = 'block';
+  }
+}
+
+// Call the function on page load and when the window is resized
+window.onload = hideNavOnSmallScreen;
+window.onresize = hideNavOnSmallScreen;
